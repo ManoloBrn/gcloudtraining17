@@ -1,11 +1,16 @@
-application: your-project-id
-version: alpha-001
+application: amarelloprojects2017
+version: alpha-004
 runtime: python27
 api_version: 1
 threadsafe: yes
 
 handlers:       # static then dynamic
 
+- url: /.*
+  script: _go_app
+  login: admin
+  secure: always
+  
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
