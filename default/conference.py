@@ -138,7 +138,7 @@ class ConferenceApi(remote.Service):
         return request
 
 
-        def _getQuery(self, request):
+    def _getQuery(self, request):
         """Return formatted query from the submitted filters."""
         q = Conference.query()
         inequality_filter, filters = self._formatFilters(request.filters)
