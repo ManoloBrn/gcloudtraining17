@@ -412,7 +412,7 @@ class ConferenceApi(remote.Service):
             items=[self._copyConferenceToForm(conf, "") for conf in q]
         )
 
-	def _doAlert():
+	def _doAlert(self):
 		a = Alert.query().order(-Alert.date).get()
 		la = LatestAlert()
 		for field in la.all_fields():
