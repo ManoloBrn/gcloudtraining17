@@ -1,5 +1,5 @@
 application: amarelloprojects2017
-version: alpha-007
+version: alpha-008
 runtime: python27
 api_version: 1
 threadsafe: yes
