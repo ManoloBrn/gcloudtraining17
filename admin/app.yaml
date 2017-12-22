@@ -1,6 +1,6 @@
 application: amarelloprojects2017
 module: admin
-version: alpha-002
+version: alpha-008
 runtime: go
 api_version: go1
 

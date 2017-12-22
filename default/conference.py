@@ -27,6 +27,8 @@ from models import ConferenceForm
 from models import ConferenceForms
 from models import ConferenceQueryForms
 from models import TeeShirtSize
+from models import Alert
+from models import LatestAlert
 
 from utils import getUserId
 
@@ -410,6 +412,20 @@ class ConferenceApi(remote.Service):
             items=[self._copyConferenceToForm(conf, "") for conf in q]
         )
 
+	def _doAlert():
+		a = Alert.query().order(-Alert.date).get()
+		la = LatestAlert()
+		for field in la.all_fields():
+			if field.name == 'content':
+				setattr(la, field.name, a.content)
+		la.check_initialized()
+		return la
+	
+	
+	@endpoints.method(message_types.VoidMessage, LatestAlert,
+					path='alert', http_method='GET', name='getAlert')
+	def getAlert(self, request):
+		return self._doAlert()
 
 # registers API
 api = endpoints.api_server([ConferenceApi])
