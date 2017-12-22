@@ -84,6 +84,11 @@
                     <input id="maxAttendees" type="text" name="maxAttendees" ng-model="conference.maxAttendees"
                            class="form-control"/>
                 </div>
+                <div class="form-group">
+                    <label for="metaDatos">Metadatos</label>
+                    <textarea id="metaDatos" type="text" name="metadatos" maxlength="20" ng-model="conference.metaDatos"
+                              class="form-control"></textarea>
+                </div>
 
                 <button ng-click="createConference(conferenceForm)" class="btn btn-primary"
                         ng-disabled="!isValidConference(conferenceForm) || loading">Create
