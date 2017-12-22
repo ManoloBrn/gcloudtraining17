@@ -22,7 +22,7 @@ from models import ProfileMiniForm
 from models import ProfileForm
 from models import TeeShirtSize
 
-from utils import getUSerId
+from utils import getUserId
 
 from settings import WEB_CLIENT_ID
 
