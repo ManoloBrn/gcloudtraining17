@@ -267,7 +267,7 @@ conferenceApp.controllers.controller('ShowConferenceCtrl', function ($scope, $lo
     ];
 
     $scope.filtereableFields = [
-        {enumValue: 'CITY', displayName: 'Citys'},
+        {enumValue: 'CITY', displayName: 'City'},
         {enumValue: 'TOPIC', displayName: 'Topic'},
         {enumValue: 'MONTH', displayName: 'Start month'},
         {enumValue: 'MAX_ATTENDEES', displayName: 'Max Attendees'},
