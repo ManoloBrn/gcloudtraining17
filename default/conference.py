@@ -61,6 +61,7 @@ FIELDS =    {
             'TOPIC': 'topics',
             'MONTH': 'month',
             'MAX_ATTENDEES': 'maxAttendees',
+            'METADATOS': "metaDatos"
             }
 
 CONF_GET_REQUEST = endpoints.ResourceContainer(
